@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: 'SwirlyDO';
-    src: url("Pacifico-Regular.ttf") format('truetype');
+    src: url("../fonts/Pacifico-Regular.ttf") format('truetype');
 
 }
 .titlering {
