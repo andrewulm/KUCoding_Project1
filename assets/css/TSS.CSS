@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'SwirlyQ';
+    src: url("Spirax-Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'SwirlyDO';
+    src: url("../fonts/Pacifico-Regular.ttf") format('truetype');
+
+}
+.titlering {
+    background-color: #08b285;
+    font-family: 'SwirlyDO';
+    color: white;
+}
+
+.baskinsRobbins {
+    background-color: white;
+    color: #08b285;
+}
