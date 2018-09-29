@@ -25,7 +25,7 @@ $(document).ready(function () {
                 console.log(results);
                 for (var i = 0; i < response.matches.length; i++) {
                     
-                        var ingredientDiv = $("<div class = 'col' >");
+                        var ingredientDiv = $("<div class = 'col-sm-6' >");
                         var recipeName = response.matches[i].recipeName;
                         console.log(recipeName);
                         var p = $("<p>").text("Recipe: " + recipeName)
