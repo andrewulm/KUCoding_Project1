@@ -1,4 +1,5 @@
 // Nosh
+
 // Author: Andrew Ulm
 
 const YUMMLY_APIKEY = 'ed390d594e8e1a62e504715e17a2943b';
@@ -11,7 +12,7 @@ $.ajax({
     url: YUMMLY_URL,
     method: 'GET'
 }).then( function(res) {
-
+ 
     console.log(res)
 
 });
