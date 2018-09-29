@@ -28,10 +28,15 @@
             <div id="_searchBar" class="row">
                 <div class="col text-center">
                     <form class="form-check-inline">
-                        <input class="form-control mr-sm-2 mx-auto" type="search" placeholder="Ingredient" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0 mx-auto" type="submit">Add!</button>
+                        <input id="_ingredient" class="form-control mr-sm-2 mx-auto" type="search" placeholder="Ingredient" aria-label="Search">
+                        <button id="_addIngredient" class="btn btn-outline-success my-2 my-sm-0 mx-auto" type="submit">Add!</button>
                     </form>
                 </div>
+            </div>
+            <div>
+                <ul id="_ingredientList">
+                    <!-- Ingredients to send to API go here -->
+                </ul>
             </div>
         </div>
         <div id="_recipes"class="row">
