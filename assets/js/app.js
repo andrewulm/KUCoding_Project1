@@ -21,18 +21,22 @@ $(document).ready(function () {
             method: 'GET'
         })
             .then(function (response) {
-                var matches = response;
-                console.log(matches);
-                for (var i = 0; i < matches.length; i++) {
-                   
-                        var ingredientDiv = $("<div>");
-                        var recipeName = matches[i].recipeName;
+                var results = response;
+                console.log(results);
+                for (var i = 0; i < response.matches.length; i++) {
+                    
+                        var ingredientDiv = $("<div class = 'col' >");
+                        var recipeName = response.matches[i].recipeName;
                         console.log(recipeName);
                         var p = $("<p>").text("Recipe: " + recipeName)
                         var recipeImage = $("<img>");
-                        recipeImage.attr("src",matches[i].smallImageURLs);
-                        ingredientDiv.append(p);
+                        recipeImage.attr("src",response.matches[i].smallImageUrls);
+                        console.log(recipeImage);
+                        $("a").attr("href", "http://www.yummly.com/recipe/" + response.matches[i].id);
+                        ingredientDiv.append("<a href = 'www.yummly.com/recipe/'" + response.matches[i].id + '>' + "<p> Recipe: " + recipeName + "</p>" +"</a>");
                         ingredientDiv.append(recipeImage);
+                        
+                        
                         $("#_recipes").prepend(ingredientDiv);
                     
                     
