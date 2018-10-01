@@ -12,9 +12,19 @@ $(document).ready(function () {
     function addIngredient(ingredient) {
         ingredients.push(ingredient.toLowerCase() + '+');
 
-        $('#_ingredientList').append('<li>' + ingredient + '<button class="delete"> X </button>');
+        $('#_ingredientList').append('<li data-id="' + ingredient + '+">' + ingredient + '<button class="delete"> <i class="fas fa-times"></i> </button>');
         console.log(ingredients);
 
+    }
+
+    function removeIngredient(item) {
+        let arrayItemToRemove = jQuery.inArray($(item).parent().attr('data-id'), ingredients);
+
+        $(item).parent().remove();
+
+        ingredients.splice(arrayItemToRemove, 1);
+
+        showGetRecipesButton();
     }
 
     function getRecipes() {
@@ -27,17 +37,15 @@ $(document).ready(function () {
     }
 
     function showGetRecipesButton() {
-        if ( ingredients.length > 1 ) {
+        if ( ingredients.length > 0 ) {
             $('#_getRecipes').css('display', 'block');
         } else {
             $('#_getRecipes').css('display', 'none');
         }
     }
 
-
     $("#_addIngredient").on('click', function(event){
         event.preventDefault();
-        showGetRecipesButton();
 
         let ingredient = $("#_ingredient").val().trim();
 
@@ -47,6 +55,8 @@ $(document).ready(function () {
             addIngredient(ingredient);
             $('#_ingredient').val('');
         }
+
+        showGetRecipesButton();
     });
 
     $('#_getRecipes').on('click', function(event){
@@ -56,4 +66,9 @@ $(document).ready(function () {
 
         getRecipes();
     });
+
+    $(document).on('click', '.delete', function() {
+        removeIngredient(this);
+    });
+
 });

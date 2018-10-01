@@ -12,6 +12,11 @@
     color: white;
 }
 
+.title img {
+    margin: 0 auto;
+    width: 8%;
+}
+
 h1 {
     font-family: 'SwirlyDO';
     margin: 30px auto 50px;
@@ -75,6 +80,7 @@ h1 {
     border: 1px #ccc solid;
     padding: 10px;
     margin: 3px;
+    position: relative;
 }
 
 #_getRecipes {
@@ -88,13 +94,17 @@ h1 {
     margin: 0 auto;
 }
 
+.delete {
+    position: absolute;
+    right: 10px;
+    border-radius: 3px;
+    border: none;
+    background: none;
+    color: #bb2200;
+}
 
-
-
-
-
-.logoX {
-    width: 10%;
-    height: 10%;
-    margin: auto;
+.delete:hover {
+    cursor: pointer;
+    background: #bb2200;
+    color: #fff;
 }
