@@ -7,22 +7,94 @@
     src: url("../fonts/Pacifico-Regular.ttf") format('truetype');
 
 }
-.titlering {
+.title {
     background-color: #08b285;
-    font-family: 'SwirlyDO';
     color: white;
 }
 
-.baskinsRobbins {
-    background-color: white;
+h1 {
+    font-family: 'SwirlyDO';
+    margin: 30px auto 50px;
     color: #08b285;
+    font-size: 48px;
 }
+
+#_searchBar {
+    display: flex;
+    flex-basis: 100%;
+}
+
+#_searchBar form {
+    display: flex;
+    flex-basis: 50%;
+    justify-items: center;
+    margin: 0 auto;
+    border-radius: 6px;
+    border: 1px #cccccc solid;
+    padding: 10px;
+}
+
+#_searchBar form input {
+    display: flex;
+    flex-basis: 100%;
+    border: none;
+}
+
+#_searchBar form button {
+    border-radius: 6px;
+    border: 1px #08b285 solid;
+    background: #fff;
+    color: #08b285;
+    padding: 5px 10px;
+}
+
+#_searchBar form button:hover {
+    background: #08b285;
+    color: #fff;
+    cursor: pointer;
+}
+
+#list {
+    display: flex;
+    justify-content: center;
+}
+
+#_ingredientList {
+    list-style: none;
+    display: flex;
+    flex-basis: 35%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#_ingredientList li {
+    display: flex;
+    flex-basis: 100%;
+    border-radius: 6px;
+    border: 1px #ccc solid;
+    padding: 10px;
+    margin: 3px;
+}
+
+#_getRecipes {
+    border-radius: 6px;
+    border: 1px #08b285 solid;
+    background: #08b285;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 15px;
+    display: none;
+    margin: 0 auto;
+}
+
+
+
+
+
 
 .logoX {
     width: 10%;
     height: 10%;
     margin: auto;
-}
-.recipy {
-    size: 300%;
 }

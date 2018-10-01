@@ -16,32 +16,59 @@
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/app.js"></script>
 </head>
-<body class= "titlering">
-    <nav class="titlering navbar navbar-expand-lg">
+<body>
+    <nav class="title navbar navbar-expand-lg">
         <img class="logoX" src='assets/images/NoshLogo.png'>
     </nav>
-    <div class= "jumbotron bg-light baskinsRobbins">
-        <div class="container">
 
-            <h1 class="display-4 text-center">What's in your fridge?</h1>
-            <br><br>
-            <div id="_searchBar" class="row">
-                <div class="col text-center">
-                    <form class="form-check-inline">
-                        <input id="_ingredient" class="form-control mr-sm-2 mx-auto" type="search" placeholder="Ingredient" aria-label="Search">
-                        <button id="_addIngredient" class="btn btn-outline-success my-2 my-sm-0 mx-auto" type="submit">Add!</button>
-                    </form>
-                </div>
+    <div class="container">
+        <h1 class="text-center">What's in your fridge?</h1>
+
+        <div class="row">
+            <div class="col text-center" id="_searchBar">
+                <form class="form-check-inline">
+                    <input id="_ingredient" class="form-control mr-sm-2 mx-auto" type="search" placeholder="Ingredient" aria-label="Search">
+                    <button id="_addIngredient" type="submit">Add!</button>
+                </form>
             </div>
-            <div>
+        </div>
+
+        <div class="row">
+            <div class="col" id="list">
                 <ul id="_ingredientList">
-                    <!-- Ingredients to send to API go here -->
+                    <!-- // Ingredients to send to API go here // -->
                 </ul>
             </div>
         </div>
-        <div id="_recipes"class="row bg-light mx-a text-center">
 
+        <div class="row">
+            <div class="col text-center">
+                <button id="_getRecipes">Get Recipes</button>
+            </div>
         </div>
+
     </div>
+
+
+
+        <!--<div class="container">-->
+
+            <!--<h1 class="display-4 text-center">What's in your fridge?</h1>-->
+            <!--<br><br>-->
+            <!--<div id="_searchBar" class="row">-->
+                <!--<div class="col text-center">-->
+
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<ul id="_ingredientList">-->
+                    <!--&lt;!&ndash; Ingredients to send to API go here &ndash;&gt;-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div id="_recipes"class="row mx-a text-center">-->
+            <!--<button id="_getRecipes">Get Recipes</button>-->
+        <!--</div>-->
+    <!--</div>-->
 </body>
 </html>
