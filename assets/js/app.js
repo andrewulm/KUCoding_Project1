@@ -13,8 +13,6 @@ $(document).ready(function () {
         ingredients.push(ingredient.toLowerCase() + '+');
 
         $('#_ingredientList').append('<li data-id="' + ingredient + '+">' + ingredient + '<button class="delete"> <i class="fas fa-times"></i> </button>');
-        console.log(ingredients);
-
     }
 
     function removeIngredient(item) {
@@ -33,7 +31,23 @@ $(document).ready(function () {
             method: 'GET'
         }).then( function(res) {
             console.log(res);
-        })
+            let recipes = res.matches;
+
+            recipes.forEach(function(recipe) {
+
+                let recipesList = $('#_recipes');
+
+               let newRecipe = $(
+                   '<div class="card">' +
+                    '<div class="card-header"><a href=""' + recipe.recipeName + '</div>' +
+                    '<div class="card-body">' +
+                        '<img src="' + recipe.imageUrlsBySize[90] + '">' + '</div>'
+               );
+
+                $(recipesList).append(newRecipe);
+            });
+
+        });
     }
 
     function showGetRecipesButton() {
