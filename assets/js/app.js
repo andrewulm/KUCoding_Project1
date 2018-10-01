@@ -39,7 +39,7 @@ $(document).ready(function () {
 
                let newRecipe = $(
                    '<div class="card">' +
-                    '<div class="card-header"><a href=""' + recipe.recipeName + '</div>' +
+                    '<div class="card-header">' + recipe.recipeName + '</div>' +
                     '<div class="card-body">' +
                         '<img src="' + recipe.imageUrlsBySize[90] + '">' + '</div>'
                );
