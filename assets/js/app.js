@@ -45,7 +45,7 @@ $(document).ready(function () {
             recipes.forEach(function(recipe) {
                 let recipesList = $('#_recipes');
                    let newRecipe = $(
-                       '<div class="card">' +
+                       '<div class="card element">' +
                         '<div class="card-header">' + recipe.recipeName + '</div>' +
                         '<div class="card-body">' +
                             '<img src="' + recipe.imageUrlsBySize[90] + '">' + '</div>'
