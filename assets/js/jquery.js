@@ -8835,7 +8835,7 @@
                 text: "text/plain",
                 html: "text/html",
                 xml: "application/xml, text/xml",
-                json: "application/json, text/javascript"
+                json: "application/json, text/js"
             },
 
             contents: {
@@ -9629,7 +9629,7 @@
 // Install script dataType
     jQuery.ajaxSetup( {
         accepts: {
-            script: "text/javascript, application/javascript, " +
+            script: "text/js, application/js, " +
                 "application/ecmascript, application/x-ecmascript"
         },
         contents: {
