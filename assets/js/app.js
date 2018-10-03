@@ -92,5 +92,8 @@ $(document).ready(function () {
     // When the 'X' is clicked
     $(document).on('click', '.delete', function() {
         removeIngredient(this);
+        $("#_recipes").removeClass("element2");
+        $("#_recipes").addClass("element2");
+        
     });
 });
