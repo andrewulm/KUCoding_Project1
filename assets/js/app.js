@@ -46,7 +46,7 @@ $(document).ready(function () {
                 let recipesList = $('#_recipes');
                    let newRecipe = $(
                        '<div class="card element">' +
-                        '<div class="card-header">' + recipe.recipeName + '</div>' +
+                        '<div class="card-header"><a href="https://www.yummly.com/recipe/' + recipe.id + '">' + recipe.recipeName + '</a></div>' +
                         '<div class="card-body">' +
                             '<img src="' + recipe.imageUrlsBySize[90] + '">' + '</div>'
                    );
@@ -85,7 +85,8 @@ $(document).ready(function () {
     $('#_getRecipes').on('click', function(event){
         event.preventDefault();
 
-        YUMMLY_URL = 'https://api.yummly.com/v1/api/recipes?_app_id=' + YUMMLY_APPID + '&_app_key=' + YUMMLY_APIKEY + '&q=' + ingredients;
+        $('#_recipes').empty();
+        YUMMLY_URL = 'https://api.yummly.com/v1/api/recipes?_app_id=' + YUMMLY_APPID + '&_app_key=' + YUMMLY_APIKEY + '&q=' + ingredients + '&maxResult=16';
         getRecipes();
     });
 
