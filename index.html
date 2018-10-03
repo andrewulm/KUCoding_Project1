@@ -4,56 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type=image/png href="assets/images/NoshLogo.png">
 
     <title>Nosh</title>
 
     <!-- / Import CSS / -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/tss.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/TSS.css">
     
 
     <!-- / Import Javascript / -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/app.js"></script>
 </head>
-<body>
-    <nav class="title navbar navbar-expand-lg">
-        <img src='assets/images/NoshLogo.png'>
+<body class= "titlering">
+    <nav class="titlering navbar navbar-expand-lg">
+        <h1 class="mx-auto navbar-brand">NOSH</h1>
     </nav>
+    <div class= "jumbotron bg-light baskinsRobbins">
+        <div class="container">
 
-    <div class="container">
-        <h1 class="text-center">What's in your fridge?</h1>
-
-        <div class="row">
-            <div class="col text-center" id="_searchBar">
-                <form class="form-check-inline">
-                    <input id="_ingredient" class="form-control mr-sm-2 mx-auto" type="search" placeholder="Ingredient" aria-label="Search">
-                    <button id="_addIngredient" type="submit">Add!</button>
-                </form>
+           <h1 class="display-4 text-center">What's in your fridge?</h1>
+            <br><br>
+            <div id="_searchBar" class="row">
+                <div class="col text-center">
+                    <form class="form-check-inline">
+                        <input class="form-control mr-sm-2 mx-auto" type="search" placeholder="Ingredient" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0 mx-auto" type="submit">Add!</button>
+                    </form>
+                </div>
             </div>
         </div>
+        <div id="_recipes"class="row">
 
-        <div class="row">
-            <div class="col" id="list">
-                <ul id="_ingredientList">
-                    <!-- // Ingredients to send to API go here // -->
-                </ul>
-            </div>
         </div>
-
-        <div class="row">
-            <div class="col text-center">
-                <button id="_getRecipes">Get Recipes</button>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col" id="_recipes">
-                <!-- // Recipe Cards go here // -->
-            </div>
-        </div>
-
     </div>
 </body>
 </html>
