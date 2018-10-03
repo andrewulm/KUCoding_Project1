@@ -46,7 +46,7 @@ $(document).ready(function () {
                 let recipesList = $('#_recipes');
                    let newRecipe = $(
                        '<div class="card element">' +
-                        '<div class="card-header"><a href="https://www.yummly.com/recipe/' + recipe.id + '">' + recipe.recipeName + '</a></div>' +
+                        '<div class="card-header"><a href="https://www.yummly.com/recipe/' + recipe.id + '" target="_blank">' + recipe.recipeName + '</a></div>' +
                         '<div class="card-body">' +
                             '<img src="' + recipe.imageUrlsBySize[90] + '">' + '</div>'
                    );
@@ -92,7 +92,7 @@ $(document).ready(function () {
 
     // When the 'X' is clicked
     $(document).on('click', '.delete', function() {
-        removeIngredient(this); 
+        removeIngredient(this);
         
     });
 });
