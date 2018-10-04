@@ -45,13 +45,15 @@ $(document).ready(function () {
             recipes.forEach(function(recipe) {
                 let recipesList = $('#_recipes');
                    let newRecipe = $(
-                       '<div class="card element">' +
+                       '<div class="card">' +
                         '<div class="card-header"><a href="https://www.yummly.com/recipe/' + recipe.id + '">' + recipe.recipeName + '</a></div>' +
                         '<div class="card-body">' +
                             '<img src="' + recipe.imageUrlsBySize[90] + '">' + '</div>'
                    );
 
                 $(recipesList).append(newRecipe);
+                $("#_recipes").removeClass('element2');
+                $("#_recipes").addClass('element');
             });
         });
     }
